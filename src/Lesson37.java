@@ -250,7 +250,7 @@ public class Lesson37 {
         int n = scanner.nextInt();
         var from = (long) Math.pow(10, n - 1);
         var to = (long) Math.pow(10, n) - 1;
-        int count = 0; // đếm phần tử trong 1 dòng 
+        int count = 0; // đếm phần tử trong 1 dòng
         for (long i = from; i <= to; i++) {
             if(isBeautyNumber(i)){
                 System.out.print(i);
