@@ -1,4 +1,5 @@
-import javax.swing.plaf.IconUIResource;
+package chapter3;
+
 import java.util.Scanner;
 
 public class Lesson38 {

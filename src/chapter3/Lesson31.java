@@ -1,4 +1,5 @@
-import java.text.DecimalFormat;
+package chapter3;
+
 import java.util.Scanner;
 
 public class Lesson31 {

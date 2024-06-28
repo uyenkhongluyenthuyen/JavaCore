@@ -1,6 +1,4 @@
-import java.sql.SQLOutput;
-import java.util.Locale;
-import java.util.Scanner;
+package chapter2;
 
 import static java.lang.StringTemplate.STR;
 

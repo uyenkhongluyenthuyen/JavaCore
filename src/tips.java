@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 public class tips {
     public static void main(String[] args) {
         //Ctrl J - CommandJ + fori
