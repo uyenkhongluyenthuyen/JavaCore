@@ -98,6 +98,7 @@ public class Lession45 {
         }
 
 
+
     }
     //phương thức tính tổng S = 1 + 1/2 + 1/3 + ... + 1/n
     private static double sumS(int n) {
