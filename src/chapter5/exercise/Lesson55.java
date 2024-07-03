@@ -2,6 +2,7 @@ package chapter5.exercise;
 
 import com.sun.source.doctree.EscapeTree;
 
+import javax.imageio.ImageTranscoder;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -94,24 +95,42 @@ public class Lesson55 {
         //của một ma trận số nguyên cấp m x n. Hãy viết chương trình cho phép nhập các phần tử của hai
         //ma trận cấp m x n và tính tổng của hai ma trận đó. Sau đó, in kết quả tổng của hai ma trận ra màn
         //hình.
-        Scanner scanner = new Scanner(System.in);
-        int m = scanner.nextInt();
-        int n = scanner.nextInt();
-        int[][] matrix1 = new int[m][n];
-        int[][] matrix2 = new int[m][n];
-        System.out.println("Nhập các phần tử cho ma trận 1:");
-        fillMatrix(matrix1, scanner);
-        System.out.println("Nhập các phần tử cho ma trận 2:");
-        fillMatrix(matrix2, scanner);
+//        Scanner scanner = new Scanner(System.in);
+//        int m = scanner.nextInt();
+//        int n = scanner.nextInt();
+//        int[][] matrix1 = new int[m][n];
+//        int[][] matrix2 = new int[m][n];
+//        System.out.println("Nhập các phần tử cho ma trận 1:");
+//        fillMatrix(matrix1, scanner);
+//        System.out.println("Nhập các phần tử cho ma trận 2:");
+//        fillMatrix(matrix2, scanner);
+//
+//        int[][] sumMatrix = sumMatrix(matrix1, matrix2);
+//        onScreen(sumMatrix);
 
-        int[][] sumMatrix = sumMatrix(matrix1, matrix2);
-        onScreen(sumMatrix);
-        
         //Bài 11. Nhập vào từ bàn phím hai số nguyên dương m và n, trong đó m và n là số hàng và cột của
         //một ma trận chỉ chứa hai số 0 hoặc 1. Hãy viết chương trình vẽ ma trận cấp m x n bằng các số 0
         //và 1 rồi in ra màn hình. Lưu ý phần tử đầu tiên của ma trận bằng 0, phần tử tiếp theo là 1 và cứ
         //thế tiếp tục.
+        Scanner scanner = new Scanner(System.in);
+        int m = scanner.nextInt();
+        int n = scanner.nextInt();
+        int[][] matrix = new int[m][n];
+        fillMatrix2(matrix);
+        onScreen(matrix);
 
+    }
+
+    private static void fillMatrix2(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if((j + i) % 2 == 0){
+                    matrix[i][j] = 0;
+                }else {
+                    matrix[i][j] = 1;
+                }
+            }
+        }
     }
 
     //tính tổng hai ma trận
@@ -128,7 +147,7 @@ public class Lesson55 {
     private static void onScreen(int[][] matrix) {
         for (int[] ints : matrix) {
             for (int anInt : ints) {
-                System.out.print(anInt + " ");
+                System.out.printf("%5d", anInt);
             }
             System.out.println();
         }
