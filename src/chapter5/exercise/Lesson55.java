@@ -118,7 +118,6 @@ public class Lesson55 {
         int[][] matrix = new int[m][n];
         fillMatrix2(matrix);
         onScreen(matrix);
-
     }
 
     private static void fillMatrix2(int[][] matrix) {
